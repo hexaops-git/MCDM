@@ -9,7 +9,7 @@ namespace MCDM.Controllers
         private List<Group> groups = new List<Group>();
         private List<Criterion> criterions = new List<Criterion>();
 
-        public void addGroup(Group group){
+        public void AddGroup(Group group){
             //  yeni bir grup eklendiğinde mevcuttaki tüm kriterler o gruba set edilmeli Double değeri default da 0 
             foreach (var item in criterions)
             {
@@ -19,7 +19,7 @@ namespace MCDM.Controllers
         }
 
         //Bir kriter eklendiğinde mevcuttaki tüm gruplara bu kriter set edilmeli Double değeri 0 olacak
-        public void addCriterion(Criterion criterion){
+        public void AddCriterion(Criterion criterion){
             foreach(var item in groups)
             {
                 item.CriterionValue.Add(criterion, 0);
