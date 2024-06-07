@@ -83,12 +83,12 @@ namespace MCDM.Controllers
 
         public double GetPositiveI(Criterion criterion)
         {
-            return GetExtremeI(criterion, Enumerable.Max);
+            return GetExtremeI(criterion, criterion.Type ? Enumerable.Max : Enumerable.Min);
         }
 
         public double GetNegativeI(Criterion criterion)
         {
-            return GetExtremeI(criterion, Enumerable.Min);
+            return GetExtremeI(criterion, criterion.Type ? Enumerable.Min : Enumerable.Max);
         }
 
         public double GetDTWithCriterion(Criterion criterion){
